@@ -481,7 +481,7 @@ const itemCatalog = [
         { name: "Stone Brick", category: "Materials", rarity: "Abundant", price: 3, starPrice: null, location: "Crafting", obtain: "Smelt Stone at a Basic or Heavy Smelter", image: "Images/Stone Brick.png" },
         { name: "Striped Chapaa Tail", category: "Materials", rarity: "Rare", price: 80, starPrice: null, location: "Bahari Bay", obtain: "Hunt Striped Chapaa", image: "Images/Striped Chapaa Tail.png" },
         { name: "Sunstone", category: "Materials", rarity: "Epic", price: null, starPrice: null, location: "Elderwood", obtain: "Mine Jadium Ore", image: "Images/Sunstone.png" },
-        { name: "Terraflow Mask", category: "Materials", rarity: "Rare", price: null, starPrice: null, location: null, obtain: null, image: "images/Terraflow Mask.png" },
+        { name: "Terraflow Mask", category: "Materials", rarity: "Rare", price: null, starPrice: null, location: null, obtain: null, image: "Images/Terraflow Mask.png" },
         { name: "Waveback Ogopuu Scale", category: "Materials", rarity: "Epic", price: null, starPrice: null, location: "Elderwood", obtain: "Hunt Waveback Ogopuu", image: "Images/Waveback Ogopuu Scale.png" },
         { name: "Whitestone", category: "Materials", rarity: "Common", price: null, starPrice: null, location: "Elderwood", obtain: "Mine Whitestone deposits", image: "Images/Whitestone.png" },
         { name: "Whitestone Slab", category: "Materials", rarity: "Uncommon", price: null, starPrice: null, location: "Crafting", obtain: "Process Whitestone", image: "Images/Whitestone Slab.png" }
