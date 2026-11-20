@@ -392,7 +392,7 @@ document.getElementById("inventory-items").addEventListener("input", event => {
 
 const itemCatalog = [
 ...[
-        { name: "Aeroflow Mask", category: "Materials", rarity: "Rare", price: null, starPrice: null, location: null, obtain: null, image: "images/Aeroflow Mask.png" },
+        { name: "Aeroflow Mask", category: "Materials", rarity: "Rare", price: null, starPrice: null, location: null, obtain: null, image: "Images/Aeroflow Mask.png" },
         { name: "Amethyst", category: "Materials", rarity: "Epic", price: 1500, starPrice: null, location: "Elderwood", obtain: "Mine Palium and Platinum deposits", image: "images/Amethyst.png" },
         { name: "Ancient Amber", category: "Materials", rarity: "Epic", price: 350, starPrice: null, location: "Elderwood", obtain: "Forage from Ancient Trees", image: "images/Ancient Amber.png" },
         { name: "Ancient Wood", category: "Materials", rarity: "Abundant", price: 1, starPrice: null, location: "Elderwood", obtain: "Chop Ancient Trees", image: "images/Ancient Wood.png" },
