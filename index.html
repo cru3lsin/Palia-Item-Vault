@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Item Vault | Palia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="app">
+
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">♜</div>
+                <h1>THE ITEM VAULT</h1>
+                <p>PALIA COLLECTION</p>
+            </div>
+
+            <nav>
+                <span class="nav-heading">COLLECTION</span>
+                <a href="#" class="nav-link active" data-page="home">⌂ <span>Dashboard</span></a>
+                <a href="#" class="nav-link" data-page="inventory">▤ <span>My Inventory</span></a>
+                <a href="#" class="nav-link" data-page="catalog">✧ <span>All Items</span></a>
+
+                <span class="nav-heading">DISCOVER</span>
+                <a href="#" class="nav-link" data-page="locations">⌖ <span>Locations</span></a>
+                <a href="#" class="nav-link" data-page="prices">◈ <span>Prices</span></a>
+
+                <span class="nav-heading">PERSONAL</span>
+                <a href="#" class="nav-link" data-page="settings">⚙ <span>Settings</span></a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>✦</span>
+                <p>Your collection, your world.</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">YOUR PERSONAL DATABASE</p>
+                    <h2 id="page-title">Dashboard</h2>
+                </div>
+            </header>
+
+            <section class="welcome">
+                <div>
+                    <p class="eyebrow">WELCOME TO YOUR COLLECTION</p>
+                    <h2>The Item Vault</h2>
+                    <p>Keep track of everything you've gathered throughout Palia.</p>
+                </div>
+                <div class="welcome-symbol">♜</div>
+            </section>
+
+            <section class="statistics">
+                <div class="stat-card">
+                    <span class="stat-icon">▤</span>
+                    <p>Total Items</p>
+                    <h3 id="total-items">0</h3>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">◇</span>
+                    <p>Total Quantity</p>
+                    <h3 id="total-quantity">0</h3>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">◈</span>
+                    <p>Collection Value</p>
+                    <h3 id="total-value">0 <small>Gold</small></h3>                
+</section>
+
+<section class="collection-section" id="inventory-view" style="display: none;">
+
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">YOUR PERSONAL COLLECTION</p>
+            <h3>Browse Your Inventory</h3>
+            <p>Select a category to view the items you own.</p>
+        </div>
+    </div>
+
+    <div class="category-grid" id="inventory-category-grid">
+
+    <button class="category-card inventory-category-card" data-category="Materials">
+    <i class="fa-solid fa-hammer"></i>
+    <strong>Materials</strong>
+</button>
+
+<button class="category-card inventory-category-card" data-category="Gatherables">
+    <i class="fa-solid fa-leaf"></i>
+    <strong>Gatherables</strong>
+</button>
+
+<button class="category-card inventory-category-card" data-category="Bugs">
+    <i class="fa-solid fa-bug"></i>
+    <strong>Bugs</strong>
+</button>
+
+<button class="category-card inventory-category-card" data-category="Cooking">
+    <i class="fa-solid fa-utensils"></i>
+    <strong>Cooking</strong>
+</button>
+
+<button class="category-card inventory-category-card" data-category="Crops">
+    <i class="fa-solid fa-wheat-awn"></i>
+    <strong>Crops</strong>
+</button>
+
+<button class="category-card inventory-category-card" data-category="Equipment">
+    <i class="fa-solid fa-toolbox"></i>
+    <strong>Equipment</strong>
+</button>
+
+<button class="category-card inventory-category-card" data-category="Fish">
+    <i class="fa-solid fa-fish"></i>
+    <strong>Fish</strong>
+</button>
+
+<button class="category-card inventory-category-card" data-category="Decor">
+    <i class="fa-solid fa-couch"></i>
+    <strong>Decor</strong>
+</button>
+
+<button class="category-card inventory-category-card" data-category="Tints">
+    <i class="fa-solid fa-palette"></i>
+    <strong>Tints</strong>
+</button>
+
+<button class="category-card inventory-category-card" data-category="Treats">
+    <i class="fa-solid fa-cookie-bite"></i>
+    <strong>Treats</strong>
+</button>
+
+<button class="category-card inventory-category-card" data-category="Growables">
+    <i class="fa-solid fa-seedling"></i>
+    <strong>Growables</strong>
+</button>
+
+<button class="category-card inventory-category-card" data-category="Knickknacks">
+    <i class="fa-solid fa-gem"></i>
+    <strong>Knickknacks</strong>
+</button>
+
+<button class="category-card inventory-category-card" data-category="Lights">
+    <i class="fa-solid fa-lightbulb"></i>
+    <strong>Lights</strong>
+</button>
+
+<button class="category-card inventory-category-card" data-category="Plushies">
+    <i class="fa-solid fa-paw"></i>
+    <strong>Plushies</strong>
+</button>
+
+<button class="category-card inventory-category-card" data-category="Sittables">
+    <i class="fa-solid fa-chair"></i>
+    <strong>Sittables</strong>
+</button>
+
+<button class="category-card inventory-category-card" data-category="Surfaces">
+    <i class="fa-solid fa-table"></i>
+    <strong>Surfaces</strong>
+</button>
+
+    </div>
+
+    <button id="inventory-back" class="text-button" style="display: none;">
+    ← Back to Categories
+</button>
+
+<div class="item-list" id="inventory-items" style="display: none;"></div>
+
+</section>
+
+<section class="collection-section" id="item-detail-view" style="display: none;">
+
+    <button id="item-detail-back" class="text-button">
+        ← Back to Items
+    </button>
+
+    <div class="item-detail">
+
+        <div class="item-detail-image">
+            <img id="detail-image" src="" alt="">
+        </div>
+
+        <div class="item-detail-info">
+            <p class="eyebrow">PALIA ITEM GUIDE</p>
+            <h2 id="detail-name">Item Name</h2>
+
+            <p>Rarity: <span id="detail-rarity">—</span></p>
+            <p>Regular Sell Price: <span id="detail-price">—</span></p>
+            <p>Star Quality Price: <span id="detail-star-price">—</span></p>
+            <p>Location: <span id="detail-location">—</span></p>
+            <p>How to Obtain: <span id="detail-obtain">—</span></p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="collection-section" id="dashboard-categories">
+
+<div class="category-grid">
+
+    <button class="category-card" data-category="Materials">
+        <i class="fa-solid fa-hammer"></i>
+        <strong>Materials</strong>
+         </button>
+
+    <button class="category-card" data-category="Gatherables">
+        <i class="fa-solid fa-leaf"></i>
+        <strong>Gatherables</strong>
+    </button>
+
+    <button class="category-card" data-category="Bugs">
+        <i class="fa-solid fa-bug"></i>
+        <strong>Bugs</strong>
+    </button>
+
+    <button class="category-card" data-category="Cooking">
+        <i class="fa-solid fa-utensils"></i>
+        <strong>Cooking</strong>
+    </button>
+
+    <button class="category-card" data-category="Crops">
+        <i class="fa-solid fa-wheat-awn"></i>
+        <strong>Crops</strong>
+    </button>
+
+    <button class="category-card" data-category="Equipment">
+        <i class="fa-solid fa-toolbox"></i>
+        <strong>Equipment</strong>
+    </button>
+
+    <button class="category-card" data-category="Fish">
+        <i class="fa-solid fa-fish"></i>
+        <strong>Fish</strong>
+    </button>
+
+    <button class="category-card" data-category="Decor">
+        <i class="fa-solid fa-couch"></i>
+        <strong>Decor</strong>
+    </button>
+
+    <button class="category-card" data-category="Tints">
+        <i class="fa-solid fa-palette"></i>
+        <strong>Tints</strong>
+    </button>
+
+    <button class="category-card" data-category="Treats">
+        <i class="fa-solid fa-cookie-bite"></i>
+        <strong>Treats</strong>
+    </button>
+
+    <button class="category-card" data-category="Growables">
+        <i class="fa-solid fa-seedling"></i>
+        <strong>Growables</strong>
+    </button>
+
+    <button class="category-card" data-category="Knickknacks">
+        <i class="fa-solid fa-gem"></i>
+        <strong>Knickknacks</strong>
+    </button>
+
+    <button class="category-card" data-category="Lights">
+        <i class="fa-solid fa-lightbulb"></i>
+        <strong>Lights</strong>
+    </button>
+
+    <button class="category-card" data-category="Plushies">
+        <i class="fa-solid fa-paw"></i>
+        <strong>Plushies</strong>
+    </button>
+
+    <button class="category-card" data-category="Sittables">
+        <i class="fa-solid fa-chair"></i>
+        <strong>Sittables</strong>
+    </button>
+
+    <button class="category-card" data-category="Surfaces">
+        <i class="fa-solid fa-table"></i>
+        <strong>Surfaces</strong>
+    </button>
+
+</div>
+</section>
+
+<section class="collection-section" id="catalog-view" style="display: none;">
+
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">PALIA ITEM GUIDE</p>
+            <h3 id="category-heading">Items</h3>
+            <p>Explore item details, prices, and locations.</p>
+        </div>
+    </div>
+
+    <button id="catalog-back" class="text-button">
+        ← Back to Categories
+    </button>
+
+    <div class="item-list" id="catalog-items"></div>
+
+</section>
+
+            <section class="collection-section">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">YOUR STORED ITEMS</p>
+                        <h3>Recently Added</h3>
+                    </div>
+                    <button class="text-button" id="view-all">View All →</button>
+                </div>
+
+                <div class="item-list" id="item-list">
+                    <div class="empty-state">
+                        <span>♜</span>
+                        <h3>Your vault is waiting</h3>
+                        <p>Add your first item to begin your collection.</p>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <p>THE ITEM VAULT <span>✦</span> A PERSONAL PALIA DATABASE</p>
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+</html>
