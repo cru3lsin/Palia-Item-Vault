@@ -649,7 +649,7 @@ const itemCatalog = [
 ].map(name => ({
     name,
     category: "Bugs",
-    image: `images/${name}.png`
+    image: `Images/${name}.png`
 })),
 
 ...[
@@ -779,7 +779,7 @@ const itemCatalog = [
 ].map(name => ({
     name,
     category: "Fish",
-    image: `images/${name}.png`
+    image: `Images/${name}.png`
 }))
 ];
 
